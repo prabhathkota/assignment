@@ -47,6 +47,8 @@ def get_dot_val(each_line):
   else:
     if dot_count > dot_prev_count:
       dot_str += '+'
+    else:
+      dot_str += '-'
   return dot_str
 
 def get_star_val(each_line):

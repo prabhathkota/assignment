@@ -12,7 +12,7 @@
 	- Some text
 3.1 Lots
 	- Some more text
-	 And some more
+	- And some more
 3.1.1 And lots
 	+ One
 		+ Two

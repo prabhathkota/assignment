@@ -91,7 +91,7 @@ for each in sys.stdin:
   else:
     if prev_dot_val:
       last_element = arr[-1]
-      last_element = last_element + '\n' + '\t'*prev_dot_val + '  ' + each_line
+      last_element = last_element + '\n' + '\t'*prev_dot_val + '   ' + each_line
       arr[-1] = last_element 
     else:
       last_element = arr[-1]
@@ -116,8 +116,14 @@ for x, y in zip(arr, arr[1:]):
       x = x.replace('-', '+')
   else:
       x = x.replace('+', '-')
+
+  if not x[0].isdigit():
+    x = ' ' + x
   #Replacing tabs to spaces
   x = x.replace('\t', ' ')
   print x
+
+if not arr[-1].isdigit():
+  arr[-1] = ' ' + arr[-1] 
 print arr[-1].replace('\t', ' ')
 
